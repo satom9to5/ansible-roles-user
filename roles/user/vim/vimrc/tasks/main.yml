@@ -4,3 +4,20 @@
   template: >
     src=vimrc.j2
     dest=~/.vimrc
+
+- name: create dein directory
+  tags:
+    - vim
+  file: >
+    path=~/.vim/dein
+    state=directory
+
+- name: copy dein toml
+  tags:
+    - vim
+  with_items:
+    - dein
+    - dein_lazy
+  template: >
+    src="{{ item }}.toml.j2"
+    dest="~/.vim/dein/{{ item }}.toml"
