@@ -1,0 +1,6 @@
+- hosts:
+    - localhost
+  connection: local
+  roles:
+    - user/git/base_setting
+    - user/git/git_prompt
