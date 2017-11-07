@@ -44,10 +44,5 @@ if has('vim_starting') && dein#check_install()
   call dein#install()
 endif
 
-" デフォルトのファイラをvimfilerに
-let g:vimfiler_as_default_explorer = 1
-" vimfilerの表示設定
-noremap <C-X><C-T> :VimFiler -split -simple -winwidth=45 -no-quit<ENTER>
-
 " ファイルタイプ別のプラグイン/インデントを有効にする
 filetype plugin indent on
